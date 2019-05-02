@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FF5722</color>
+    <color name="colorPrimary">#0F89C6</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#FFFFFF</color>
+    <color name="lightBlue">#009FDA</color>
+    <color name="darkBlue">#001965</color>
+    <color name="background">#D0D6D8</color>
+
+
+    <!-- BUTTONS -->
+    <color name="btColor">#009FDA</color>
+    <color name="btBorder">#001965</color>
+    <color name="btText">#001965</color>
+
+    <!-- TEXTVIEWS -->
+
+
+
 </resources>

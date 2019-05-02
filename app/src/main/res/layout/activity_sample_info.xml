@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SampleInfoActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.1"
+        android:src="@drawable/novonordisktekst_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.956" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="412dp"
+        android:layout_height="405dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.1"
+        android:src="@drawable/novonordiskimage_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592" />
+
+    <TextView
+        android:id="@+id/titleView"
+        android:background="@drawable/textview_border"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/headline"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkBlue"
+        android:paddingTop="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:background="@drawable/rounded_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="120dp"
+        android:text="@string/button_scan"
+        android:textColor="@color/btText"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:background="@drawable/rounded_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/button_accept"
+        android:textColor="@color/btText"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/ID"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/textview_thin_border"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="@string/text_infoID"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleView" />
+
+    <TextView
+        android:id="@+id/info1"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="350dp"
+        android:background="@drawable/textview_thin_border"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="@string/text_infoText"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/info2"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="790dp"
+        android:background="@drawable/textview_thin_border"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="@string/text_infoInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/info3"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/textview_thin_border"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="@string/text_infoINFO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonSend"
+        android:id="@+id/buttonRerollSend"
         android:background="@drawable/rounded_button"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/titleView" />
 
     <Button
-        android:id="@+id/buttonModtag"
+        android:id="@+id/buttonRerollModtag"
         android:background="@drawable/rounded_button"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -81,5 +81,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSend" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonRerollSend" />
 </android.support.constraint.ConstraintLayout>

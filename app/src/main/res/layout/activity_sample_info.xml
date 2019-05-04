@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonRerollModtag"
         android:background="@drawable/rounded_button"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
@@ -76,10 +76,10 @@
         android:text="@string/button_accept"
         android:textColor="@color/btText"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonRerollModtag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/buttonRerollModtag" />
 
     <TextView
         android:id="@+id/ID"

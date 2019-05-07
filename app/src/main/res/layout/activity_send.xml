@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SendActivity">
 
     <TextView
         android:id="@+id/titleView"
@@ -30,6 +30,7 @@
         android:layout_marginTop="79dp"
         android:layout_marginEnd="106dp"
         android:text="@string/button_scan"
+        android:onClick="onClickScan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageBarcode" />
@@ -60,5 +61,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonScan" />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/barcode"
+        android:name="com.google.android.gms.samples.vision.barcodereader.BarcodeCapture"
+        app:gvb_auto_focus = "true"
+        app:gvb_code_format = "all_format"
+        app:gvb_flash = "false"
+        >
+
+    </fragment>
 
 </android.support.constraint.ConstraintLayout>

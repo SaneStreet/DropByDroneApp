@@ -51,35 +51,36 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonRerollModtag"
-        android:background="@drawable/rounded_button"
+        android:id="@+id/button_scan"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="120dp"
-        android:text="@string/button_scan"
+        android:background="@drawable/rounded_button"
+        android:text="@string/button_cancel"
         android:textColor="@color/btText"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/button_accept"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:background="@drawable/rounded_button"
+        android:id="@+id/button_accept"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="563dp"
         android:layout_marginEnd="100dp"
+        android:background="@drawable/rounded_button"
         android:text="@string/button_accept"
         android:textColor="@color/btText"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonModtag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonModtag" />
+        app:layout_constraintStart_toEndOf="@+id/buttonModtag"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ID"

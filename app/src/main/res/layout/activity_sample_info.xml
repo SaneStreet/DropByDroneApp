@@ -76,10 +76,10 @@
         android:text="@string/button_accept"
         android:textColor="@color/btText"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonRerollModtag"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonModtag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonRerollModtag" />
+        app:layout_constraintStart_toEndOf="@+id/buttonModtag" />
 
     <TextView
         android:id="@+id/ID"

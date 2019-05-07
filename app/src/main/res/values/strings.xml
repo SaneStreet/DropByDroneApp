@@ -5,9 +5,6 @@
     <string name="button_scan">Scan</string>
     <string name="button_accept">Accept</string>
     <string name="button_receive">Receive</string>
-    <string name="button_indtast">Indtast</string>
-    <string name="button_rerollSend">Send</string>
-    <string name="button_rerollModtag">Modtag</string>
     <string name="text_infoID">ID</string>
     <string name="text_infoText">Text</string>
     <string name="text_infoInfo">Info</string>

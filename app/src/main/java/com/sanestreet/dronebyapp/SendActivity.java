@@ -24,7 +24,7 @@ public class SendActivity extends AppCompatActivity implements BarcodeRetriever 
         setContentView(R.layout.activity_send);
     }
 
-    public void onClickScan(){
+    public void onClickScan(View view){
         BarcodeCapture barcodeCapture = (BarcodeCapture)getSupportFragmentManager().findFragmentById(R.id.barcode);
         barcodeCapture.setRetrieval(this);
     }

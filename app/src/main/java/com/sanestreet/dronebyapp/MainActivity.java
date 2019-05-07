@@ -13,14 +13,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button buttonSend;
-        Button buttonModtag;
+        //Button buttonSend;
+        //Button buttonModtag;
+        //sendActivity();
 
-        sendActivity();
+        Button buttonRerollSend = findViewById(R.id.buttonSend);
+        buttonRerollSend.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                startActivity(new Intent("com.sanestreet.dronebyapp.SendActivity"));
+            }
+        });
 
     }
 
-    public void sendActivity(){
+    /*public void sendActivity(){
         Button buttonSend = findViewById(R.id.buttonRerollSend);
         buttonSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent("com.sanestreet.dronebyapp.SendActivity"));
             }
         });
-    }
+    }*/
 
 }

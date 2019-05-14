@@ -51,5 +51,7 @@ public class SendActivity extends AppCompatActivity implements ScannerFragment.O
     public void onFragmentInteraction(String sendBackText) {
         textBarcode.setText(sendBackText);
         onBackPressed();
+        onBackPressed();
+        onBackPressed();
     }
 }

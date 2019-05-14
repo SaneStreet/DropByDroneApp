@@ -4,15 +4,21 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.samples.vision.barcodereader.BarcodeCapture;
 import com.google.android.gms.samples.vision.barcodereader.BarcodeGraphic;
+import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.barcode.Barcode;
 
 import java.util.List;
@@ -31,7 +37,7 @@ public class ScannerFragment extends Fragment implements BarcodeRetriever {
 
     private EditText textBarcodeScanResult;
     private BarcodeCapture barcodeCapture;
-    private Context mContext;
+    private Button buttonOkFragment;
 
     public ScannerFragment() {
         // Required empty public constructor
@@ -62,11 +68,12 @@ public class ScannerFragment extends Fragment implements BarcodeRetriever {
         View view = inflater.inflate(R.layout.fragment_scanner, container, false);
 
         barcodeCapture = (BarcodeCapture)getChildFragmentManager().findFragmentById(R.id.barcode);
-
+        buttonOkFragment = view.findViewById(R.id.buttonOkFragment);
         textBarcodeScanResult = view.findViewById(R.id.textBarcodeScanResult);
         textBarcodeScanResult.setText(mText);
+        textBarcodeScanResult.requestFocus();
         barcodeCapture.setRetrieval(this);
-        //textBarcodeScanResult.requestFocus();
+
 
 
         return view;
@@ -82,7 +89,6 @@ public class ScannerFragment extends Fragment implements BarcodeRetriever {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mContext = context;
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
@@ -126,9 +132,26 @@ public class ScannerFragment extends Fragment implements BarcodeRetriever {
     @Override
     public void onRetrieved(final Barcode barcode) {
 
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
                 textBarcodeScanResult.setText(barcode.displayValue);
-                sendBack(textBarcodeScanResult.getText().toString());
-                
+
+                Toast.makeText(getActivity(), barcode.displayValue, Toast.LENGTH_LONG).show();
+
+                buttonOkFragment.setOnClickListener(new View.OnClickListener(){
+                    public void onClick(View v){
+
+                        String sendBackText = textBarcodeScanResult.getText().toString();
+                        sendBack(sendBackText);
+                    }
+                });
+
+            }
+        });
+                //textBarcodeScanResult.setText(barcode.displayValue);
+                //sendBack(textBarcodeScanResult.getText().toString());
+
 
     }
 

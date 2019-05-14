@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    tools:context=".ScannerFragment">
+
+
+
+    <fragment
+        android:id="@+id/barcode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.samples.vision.barcodereader.BarcodeCapture"
+        app:gvb_auto_focus = "true"
+        app:gvb_code_format = "all_format"
+        app:gvb_flash = "false"
+        />
+
+    <EditText
+        android:id="@+id/textBarcodeScanResult"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

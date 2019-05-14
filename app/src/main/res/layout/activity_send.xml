@@ -22,18 +22,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/textBarcode"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginTop="32dp"
+        android:paddingTop="4dp"
+        android:text="Barcode here"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:background="@drawable/textview_thin_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageBarcode"/>
+
     <Button
         android:id="@+id/buttonScan"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="105dp"
-        android:layout_marginTop="79dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="106dp"
         android:text="@string/button_scan"
         android:onClick="onClickScan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageBarcode" />
+        app:layout_constraintTop_toBottomOf="@+id/textBarcode" />
 
     <ImageView
         android:id="@+id/imageBarcode"
@@ -49,19 +65,23 @@
         app:srcCompat="@drawable/default_qr" />
 
     <Button
-        android:id="@+id/buttonIndtast"
+        android:id="@+id/buttonOk"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="105dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="106dp"
         android:layout_marginBottom="123dp"
-        android:text="button_indtast"
+        android:text="@string/ok"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonScan" />
 
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />    <!--
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -71,7 +91,6 @@
         app:gvb_code_format = "all_format"
         app:gvb_flash = "false"
         >
-
-    </fragment>
+    -->
 
 </android.support.constraint.ConstraintLayout>

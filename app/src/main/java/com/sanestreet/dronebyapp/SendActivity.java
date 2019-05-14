@@ -36,6 +36,16 @@ public class SendActivity extends AppCompatActivity implements ScannerFragment.O
                 openFragment(text);
             }
         });
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text = textBarcode.getText().toString();
+                Intent intent = new Intent(SendActivity.this, SampleInfoActivity.class);
+                intent.putExtra("data", text);
+                startActivityForResult(intent, 1);
+
+            }
+        });
     }
 
     public void openFragment(String text){
